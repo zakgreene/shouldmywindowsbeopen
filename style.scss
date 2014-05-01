@@ -1,0 +1,147 @@
+/* Apply a natural box layout model to all elements: http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.chromeframe {position: absolute; top: 0;}
+
+/* Ok, this is where the fun starts.
+-------------------------------------------------------------------------------*/
+
+/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
+body {font: 16px "Helvetica Neue", Helvetica, Helmet, Freesans, sans-serif;}
+
+/* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
+
+/* We like off-black for text. */
+body, select, input, textarea {color: #333;}
+
+a {color: #03f;}
+a:hover {color: #69f;}
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700;} 
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+/* Mozilla dosen't style place holders by default */
+input:-moz-placeholder { color:#a9a9a9; }
+textarea:-moz-placeholder { color:#a9a9a9; }
+
+
+// color
+
+$blue: 			#52748d;
+$blue: 			#005a80;
+
+$bright-blue:	#bbf5f9;
+$bright-blue:	#24cae3;
+
+$bright-green:	#aafd60;
+
+$salmon:		#ffbabc;
+
+$orange:		#ec9c1f;
+$dark-orange:	darken($orange, 20%);
+
+body { 
+  background: no-repeat center center fixed; 
+  -webkit-background-size: 	auto 80%;
+  -moz-background-size: 	auto 80%;
+  -o-background-size: 		auto 80%;
+  background-size: 			auto 80%;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+    background-color: $bright-blue;
+    text-align: center;
+    letter-spacing: -0.035em;
+    color: $bright-green;
+}
+
+header {
+	position: relative;
+	top: 47%;
+	padding: 0 1.25em;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+h1 {
+    line-height: 0.9em;
+    margin-bottom: 0.05em;
+    letter-spacing: -0.03em;
+    font-size: 6em;
+
+    .maybe & {
+    	margin-bottom: 0.15em;
+    }
+}
+
+h2 {
+	line-height: 1em;
+	max-width: 75%;
+	margin: 0 auto;
+	font-size: 2.25em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+#loc {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 0;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	opacity: 0;
+	transition: 0.25s;
+	padding: 1em 0;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+
+.no, .rain {
+	background-color: $blue;
+	color: $salmon;
+}
+
+.hot {
+	background-color: $orange;
+	color: $dark-orange;
+}
+
+/* Print styles!
+-------------------------------------------------------------------------------*/
+@media print {
+
+
+
+}
+
+
+/* Media queries!
+-------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+	
+	h1 {
+		margin-top: 0.15em;
+	}
+	h2 {
+		max-width: none;
+	}
+		
+}
